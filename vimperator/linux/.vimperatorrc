@@ -1,0 +1,53 @@
+
+" 启用代理快捷键
+map <C-up> :set! network.proxy.type=1
+map <C-Down> :set! network.proxy.type=0
+
+" 翻页快捷键 [[ ]]
+" 这里涉及中文，要注意编码格式
+set nextpattern=\s*下一页|下一张|下页|下一章|下一篇\s*,\bnext|Next\b,^>$,^(>>||)$,^(>|),(>|)$,\bmore\b,\s*Next|next\s*
+set previouspattern=\s*上一页|上一张|上页|上一章|上一篇\s*,\bprev|previous|Prev|Previous\b,^<$,^(<<||)$,^(<|),(<|)$,\s*Prev|Previous|prev|previous\s*
+
+" 键映射
+noremap j 5j
+noremap k 5k
+
+noremap <F7> [[
+noremap <F8> ]]
+
+" 下上翻半页
+map J <C-d>
+map K <C-u>
+
+" 下上翻一页
+map ;j <C-f>
+map ;k <C-b>
+
+" 后前页签
+map , gT
+map . gt
+
+" 前进后退
+map <F4> H
+map <F3> L
+
+" 取消
+map ;; <Esc>
+vmap ;; <Esc>
+imap ;; <Esc>
+cmap ;; <Esc>
+
+" 定义快捷键的前缀，即<Leader>
+let mapleader=";"      
+
+" <Leader>系列快捷键
+" 百度翻译
+noremap <Leader>f :tabopen http://fanyi.baidu.com/#zh/en/<cr>
+" 谷歌翻译
+noremap <Leader>t :tabopen http://translate.google.cn/?hl=zh-CN&tab=wT#zh-CN/en/<cr>
+" 谷歌搜索
+noremap <Leader>g :tabopen http://173.194.138.103/<cr>
+
+
+
+
